@@ -45,7 +45,7 @@ for s=1:length(setIds)
       sr.seek(i); I=sr.getframeb(); f=fopen(f,'w'); fwrite(f,I); fclose(f);
     end; sr.close();
     % extract ground truth
-    td=[tDir '/annotations/' post];
+    td=[tDir '/labels/' post];
     for i=1:n, fs{i}=[fs{i} '_' dsname '.txt']; end
     count = count + vbbToFiles(A,td,fs,skip,skip);
   end
